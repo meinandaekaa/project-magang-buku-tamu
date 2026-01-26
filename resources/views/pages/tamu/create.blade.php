@@ -13,6 +13,7 @@
     <h1 class="text-2xl font-semibold mb-4">Form Buku Tamu</h1>
     <hr class="mb-6 border-gray-300">
 
+    
     <!-- Pesan sukses -->
     <template x-if="success">
         <div class="mb-4 p-4 text-green-800 bg-green-100 rounded" x-text="success"></div>

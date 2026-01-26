@@ -2,7 +2,7 @@
 <html lang="id" x-data="{ show: false }">
 <head>
     <meta charset="UTF-8">
-    <title>Login | Buku Tamu</title>
+    <title>Buku Tamu</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
