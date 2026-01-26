@@ -5,6 +5,7 @@ use App\Http\Controllers\TamuController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BukuTamuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,11 @@ Route::get('/', function () {
 // LOGIN
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'authenticate'])->name('login.process');
+
+// TAMU PUBLIK / SELF CHECK-IN
+// Bisa diakses siapa saja tanpa login, biasanya di tablet, QR code, atau PC depan
+Route::get('/buku-tamu', [BukuTamuController::class, 'create']);
+Route::post('/buku-tamu', [BukuTamuController::class, 'store']);
 
 /*
 |--------------------------------------------------------------------------

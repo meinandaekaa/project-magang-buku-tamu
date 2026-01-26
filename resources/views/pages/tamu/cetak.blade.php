@@ -43,6 +43,7 @@
                 <th>Keperluan</th>
                 <th>Tanggal</th>
                 <th>Jam Kunjungan</th>
+                <th>Jam Kepulangan</th>
                 <th>Jumlah Orang</th>
                 <th>Foto</th>
                 <th>Dibuat</th>
@@ -58,8 +59,17 @@
                 <td>{{ $tamu->keperluan }}</td>
                 <td>{{ $tamu->tanggal }}</td>
                 <td>{{ $tamu->jam_kunjungan }}</td>
+                <td>{{ $tamu->jam_kepulangan}}</td>
                 <td align="center">{{ $tamu->jumlah_orang }}</td>
-                <td>{{ $tamu->foto ?? '-' }}</td>
+                <td align="center">
+                    @if(is_array($tamu->foto))
+                         @foreach($tamu->foto as $foto)
+                             <img src="{{ public_path('storage/'.$foto) }}" width="60"><br>
+                        @endforeach
+                    @else
+                         -
+                    @endif
+                </td>
                 <td>{{ $tamu->created_at->format('d-m-Y H:i') }}</td>
             </tr>
             @endforeach

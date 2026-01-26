@@ -12,12 +12,18 @@
         <!-- KIRI -->
         <a href="{{ route('dashboard') }}" class="flex items-center gap-3 group">
             <img src="{{ asset('img/logo-kominfo.png') }}"
-                 class="h-9 drop-shadow-md group-hover:scale-105 transition">
+         class="h-9 drop-shadow-md group-hover:scale-105 transition">
 
-            <span class="font-bold text-2xl tracking-wide text-gray-900">
+            <span
+                class="font-extrabold text-2xl tracking-wide
+                        bg-gradient-to-r from-blue-700 via-sky-600 to-cyan-500
+                        bg-clip-text text-transparent
+                        transition-all duration-300
+                        group-hover:tracking-widest">
                 Sistem Buku Tamu
             </span>
         </a>
+
 
         <!-- KANAN -->
         <div class="flex items-center gap-5" x-data="{ showProfile: false }">

@@ -4,7 +4,7 @@
 
 <!-- HEADER -->
 <div class="flex items-center justify-between mb-4">
-    <h1 class="text-2xl font-semibold text-slate-800">
+    <h1 class="text-3xl font-bold text-blue-700 text-left mb-8">
         Data Daftar Tamu
     </h1>
 
@@ -14,7 +14,7 @@
                   bg-blue-600 hover:bg-blue-700
                   text-white rounded-lg
                   shadow-sm transition">
-            + Tambah Data
+            Tambah Data
         </a>
 
         <a href="{{ route('cetak-tamu') }}" target="_blank"
@@ -45,11 +45,6 @@
                 <th class="px-4 py-3">No</th>
                 <th class="px-4 py-3">Nama</th>
                 <th class="px-4 py-3">Instansi</th>
-                <th class="px-4 py-3">No Telp / WA</th>
-                <th class="px-4 py-3">Keperluan</th>
-                <th class="px-4 py-3">Tanggal</th>
-                <th class="px-4 py-3">Jam</th>
-                <th class="px-4 py-3">Jumlah</th>
                 <th class="px-4 py-3">Dibuat</th>
                 <th class="px-4 py-3 text-center">Action</th>
             </tr>
@@ -61,11 +56,6 @@
                 <td class="px-4 py-3">{{ $loop->iteration }}</td>
                 <td class="px-4 py-3">{{ $tamu->nama }}</td>
                 <td class="px-4 py-3">{{ $tamu->instansi }}</td>
-                <td class="px-4 py-3">{{ $tamu->notelp }}</td>
-                <td class="px-4 py-3">{{ $tamu->keperluan }}</td>
-                <td class="px-4 py-3">{{ $tamu->tanggal }}</td>
-                <td class="px-4 py-3">{{ $tamu->jam_kunjungan }}</td>
-                <td class="px-4 py-3">{{ $tamu->jumlah_orang }}</td>
                 <td class="px-4 py-3">
                     {{ $tamu->created_at->format('d-m-Y H:i') }}
                 </td>

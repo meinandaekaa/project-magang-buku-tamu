@@ -48,7 +48,7 @@
         <!-- HEADER -->
         <div class="flex items-center justify-between px-4 py-4">
             <span x-show="open" x-transition class="text-lg font-semibold">
-                Buku Tamu
+              Menu
             </span>
 
             <!-- TOGGLE -->

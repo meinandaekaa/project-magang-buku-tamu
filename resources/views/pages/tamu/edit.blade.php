@@ -2,9 +2,9 @@
 
 @section('body')
 
-<h1 class="text-2xl font-semibold text-gray-800 mb-1">
-    Edit Data Tamu
-</h1>
+    <h1 class="text-3xl font-bold text-blue-700 text-left mb-8">
+        Edit Data Tamu
+    </h1>
 <hr class="mb-6 border-gray-200">
 
 <form action="{{ route('tamu.update', $tamu->id) }}"
@@ -98,6 +98,20 @@
                       focus:border-blue-500 outline-none">
     </div>
 
+     <!-- Jam Kepulangan -->
+    <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-700 mb-1">
+            Jam Kepulangan
+        </label>
+        <input type="time" name="jam_kepulangan"
+               value="{{ old('jam_kunjungan', $tamu->jam_kepulangan) }}"
+               required
+               class="w-full rounded-lg border border-gray-300
+                      px-4 py-2 text-gray-800
+                      focus:ring-2 focus:ring-blue-500
+                      focus:border-blue-500 outline-none">
+    </div>
+
     <!-- Jumlah Orang -->
     <div class="mb-6">
         <label class="block text-sm font-medium text-gray-700 mb-1">
@@ -136,7 +150,7 @@
                   text-gray-800 text-sm font-medium
                   rounded-lg
                   transition">
-            ← Kembali
+            Kembali
         </a>
     </div>
 
